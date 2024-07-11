@@ -1,0 +1,400 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+.navBar {
+  position: fixed;
+  display: flex;
+  height: 70px;
+  border-radius: 30px;
+  margin-left: 250px;
+  gap: 200px;
+  margin-top: 30px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  z-index: 100;
+}
+.logoImage {
+  margin-left: 20px;
+  border-radius: 30px;
+}
+
+.shoppingCartDisplay {
+  margin-right: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.links-container {
+  margin-left: 100px;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+.navLink {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  font-size: 14px;
+  border-radius: 30px;
+}
+.navLink:hover {
+  background-color: #575757;
+}
+#logIn-Btn {
+  background-color: #575757;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 1s;
+  margin-right: 10px;
+}
+#logIn-Btn :hover {
+  background-color: #777;
+}
+.modal {
+  border: none;
+  width: 33%;
+  margin-left: 500px;
+  margin-top: 20px;
+  height: fit-content;
+}
+
+.topHalfModal img {
+  width: 100%;
+  height: 250px;
+}
+.topHalfModal h1 {
+  position: absolute;
+  top: 28%;
+  left: 5%;
+  color: white;
+}
+.bottomHalfModal {
+  margin: 40px;
+}
+.bottomHalfModal label {
+  position: relative;
+  display: block;
+  padding: 30px;
+}
+.bottomHalfModal label input {
+  padding: 10px;
+  border-radius: 15px;
+  width: 70%;
+  border: 0.3px solid grey;
+}
+
+.bottomHalfLogIn label input[type="password"] {
+  margin-left: 5px;
+}
+#sign-upBtn,
+.logInBtnModal,
+.logInBtnCloseModal {
+  margin: 24px;
+  display: block;
+  width: 90%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 0.3px solid grey;
+  cursor: pointer;
+  background-color: rgb(47, 45, 45);
+  color: white;
+  transition: 0.5s ease-in;
+}
+
+#sign-upBtn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.logInBtnCloseModal:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+#closeLoginModal,
+#closeSignUpModal {
+  position: absolute;
+  top: 2%;
+  left: 90%;
+  padding: 10px;
+  border-radius: 30px 60px;
+  border: none;
+  cursor: pointer;
+}
+
+.signUpForm label {
+  padding: 10px;
+}
+.signUpForm {
+  margin: 0;
+}
+#closemodalSignUpByLogin {
+  margin-top: 0;
+}
+
+.containerImg {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+}
+.firsImg {
+  width: 50%;
+  /* border: 1px solid blue; */
+}
+.containerImg img {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cardsContainer {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 100px;
+  gap: 30px;
+  padding-top: 150px;
+}
+.cardsContainer img {
+  border-radius: 20px;
+  width: 410px;
+  height: 400px;
+}
+.productCard {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.prouctTitle,
+.price {
+  text-align: center;
+  padding: 7px;
+}
+.price {
+  font-size: 25px;
+  font-weight: 600;
+}
+.addToCartBtn {
+  display: block;
+  width: 93%;
+  border-radius: 20px;
+  padding: 15px;
+  background-color: rgb(139, 138, 138);
+  text-align: center;
+  cursor: pointer;
+}
+.searchContainer {
+  position: absolute;
+  top: 0;
+  width: 600px;
+  margin-top: 27px;
+}
+.searchContainer label input[type="search"] {
+  width: 300px;
+}
+
+input[type="search"] {
+  padding: 10px;
+  align-items: center;
+  border-radius: 20px;
+}
+input[type="search"] {
+  padding: 10px;
+  align-items: center;
+  border-radius: 20px;
+  width: 500px;
+}
+label {
+  display: block;
+  position: absolute;
+  top: 0.5%;
+  padding: 20px;
+}
+
+.cart {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: white;
+  box-shadow: -2px 0 4px hsl(0, 4%, 15%/10%);
+  transition: 0.3s;
+  right: -100%;
+  z-index: 999;
+}
+.cartContent {
+  display: flex;
+  flex-direction: row;
+  overflow-y: auto;
+  max-height: 600px;
+  padding-left: 15px;
+}
+.cartContent .total {
+  order: 999;
+}
+
+.cart.active {
+  right: 0;
+  transition: 0.3s ease-in;
+}
+
+.cartTittle {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 25px;
+}
+.total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  border-top: 1px solid black;
+  margin-bottom: 60px;
+}
+.total-tittle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.total-price {
+  font-size: 1.075rem;
+  margin: 1rem 0 0 0.7rem;
+}
+#closeCart {
+  position: absolute;
+  top: 2%;
+  right: 10%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 999;
+}
+.cart-box img {
+  width: 150px;
+  height: 120px;
+}
+.cart-box {
+  display: flex;
+  position: relative;
+}
+.cart-quantity {
+  width: 30px;
+  height: 20px;
+}
+.details-box {
+  padding: 20px;
+  text-align: center;
+}
+.details-box .cart-product-title {
+  padding: 15px;
+  font-size: 20px;
+}
+.cart-price {
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+.cart-remove {
+  position: absolute;
+  top: 76%;
+  left: 88%;
+  color: red;
+  cursor: pointer;
+}
+.addToCartBtn:hover {
+  background-color: #797474;
+  color: rgb(255, 255, 255);
+}
+
+#footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px 10px;
+}
+
+.footer-section h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 14px;
+  color: #ddd;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-section .social a {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.footer-section .social img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  background-color: #222;
+  color: #aaa;
+  font-size: 14px;
+}
+.footer-section ul {
+  text-align: center;
+  margin-left: 60px;
+}
+.links h2 {
+  text-align: center;
+  margin-left: 60px;
+}
+.contact {
+  margin-left: 30px;
+  padding-left: 150px;
+}

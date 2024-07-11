@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="LampShop.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navBar">
+        <div class="logo">
+          <img
+            src="../Images/ProjectImage.jpg"
+            alt="Logo"
+            class="logoImage"
+            width="40px"
+            height="40px"
+          />
+        </div>
+        <div class="links-container">
+          <a href="../index.html" class="navLink">Home</a>
+          <a href="../ShopPage/shop.html" class="navLink">Shop</a>
+          <a href="../index.html#footer" class="navLink">Contact</a>
+          <a href="../index.html#blogContainer1" class="navLink">About Us</a>
+        </div>
+        <div class="navLog">
+          <button class="navBtn" id="logIn-Btn">
+            <i class="fa-solid fa-user"></i>
+          </button>
+          <i class="fa-solid fa-cart-shopping shoppingCartDisplay"></i>
+        </div>
+      </nav>
+    </header>
+    <dialog id="modalLogin" class="modal">
+      <div class="topHalfModal">
+        <h1 class="modalTittle">Login</h1>
+        <img src="../Images/LopInImg.jpg" alt="Furniture Picture" />
+      </div>
+      <div class="bottomHalfModal">
+        <form method="dialog" class="loginForm">
+          <label
+            >Email:
+            <input id="loginEmail";
+              type="email"
+              name="email"
+              placeholder="Enter You Email"
+              required
+            />
+          </label>
+          <label
+            >Password:
+            <input  id= "loginPassword"
+              type="password"
+              name="password"
+              placeholder="Enter Your Password"
+              required
+            />
+          </label>
+        </form>
+      </div>
+      <button id="sign-upBtn">
+        Sign-up
+        <i class="fa-solid fa-user"></i>
+      </button>
+      <button class="logInBtnCloseModal" id="logInBtnModal">
+        Login
+        <i class="fa-solid fa-user"></i>
+      </button>
+      <button class="closeModal" id="closeLoginModal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </dialog>
+    <dialog id="signUpModal" class="modal">
+      <div class="topHalfModal">
+        <h1 class="modalTittle">Sign Up</h1>
+        <img src="../Images/LopInImg.jpg" alt="Furniture Picture" />
+      </div>
+      <div class="bottomHalfModal">
+        <form method="dialog" class="loginForm signUpForm">
+          <label
+            >Name
+            <input id="inputName"
+              type="text"
+              name="email"
+              placeholder="Enter You Name"
+              required
+            />
+          </label>
+          <label
+            >Surnaname:
+            <input id="inputSurname"
+              type="text"
+              name="email"
+              placeholder="Enter You Surname"
+              required
+            />
+          </label>
+          <label
+            >Username:
+            <input id="inputUsername"
+              type="text"
+              name="email"
+              placeholder="Enter You Username"
+              required
+            />
+          </label>
+          <label
+            >Email:
+            <input id="inputEmail"
+              type="email"
+              name="email"
+              placeholder="Enter You Email"
+              required
+            />
+          </label>
+          <label
+            >Password:
+            <input id="InputPassword"
+              type="password"
+              name="password"
+              placeholder="Enter Your Password"
+              required
+            />
+          </label>
+        </form>
+      </div>
+      <button
+        class="logInBtnCloseModal"
+        id="closemodalSignUpByLogin"
+        style="margin-top: 0"
+      >
+        Login
+        <i class="fa-solid fa-user"></i>
+      </button>
+      <button id="closeSignUpModal" class="closeModal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </dialog>
+    <section class="cartSection">
+      <div class="cart">
+        <h2 class="cartTittle">Your Cart</h2>
+        <div class="cartContent">
+          
+        
+        <div class="total">
+          <div class="total-tittle">Total</div>
+          <div class="total-price">$0</div>
+        </div>
+      </div>
+        <i class="fa-solid fa-x" id="closeCart"></i>
+      </div>
+    </section>
+    <section class="shopBanner">
+      <div class="containerImg">
+        <div class="firstImage">
+          <img
+            src="../Images/shopImages/ShopBannerImg4.jpg"
+            alt=""
+            width="530px"
+            height="375px"
+          />
+        </div>
+        <div class="secondImg">
+          <img
+            src="../Images/shopImages/ShopBannerImg2.jpg"
+            alt=""
+            width="500px"
+          />
+        </div>
+        <div class="thirdImg">
+          <img
+            src="../Images/shopImages/shopBannerImg3.jpg"
+            alt=""
+            width="485px"
+            height="375px"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="ShopSection">
+      <div class="cardsContainer">
+        <div class="searchContainer">
+          <label
+            >Search products here
+            <i class="fa-solid fa-magnifying-glass searchIcon"></i>
+            <input type="search" name="search" id="inpSearch" />
+          </label>
+        </div>
+        <div class="productCard">
+          <img src="../Images/LampShopImg/LampImg1.webp" alt="" class="product-img"/>
+          <h2 class="prouctTitle">Lamp</h2>
+          <h3 class="price">$30</h3>
+          <i class="fa-solid fa-cart-shopping addToCartBtn"></i>
+        </div>
+        <div class="productCard">
+          <img src="../Images/LampShopImg/LampImg2.webp" alt="" class="product-img" />
+          <h2 class="prouctTitle">Lamp 1</h2>
+          <h3 class="price">$20</h3>
+          <i class="fa-solid fa-cart-shopping addToCartBtn"></i>
+        </div>
+        <div class="productCard">
+          <img src="../Images/LampShopImg/LampImg3.jpg" alt="" class="product-img" />
+          <h2 class="prouctTitle">Lamp 2</h2>
+          <h3 class="price">$33</h3>
+          <i class="fa-solid fa-cart-shopping addToCartBtn"></i>
+        </div>
+        <div class="productCard">
+          <img src="../Images/LampShopImg/LampImg4.jpg" alt="" class="product-img" />
+          <h2 class="prouctTitle">Lamp 3</h2>
+          <h3 class="price">$70</h3>
+          <i class="fa-solid fa-cart-shopping addToCartBtn"></i>
+        </div>
+        <div class="productCard">
+          <img src="../Images/LampShopImg/LampImg5.webp" alt=""class="product-img" />
+          <h2 class="prouctTitle">Lamp 4</h2>
+          <h3 class="price">$55</h3>
+          <i class="fa-solid fa-cart-shopping addToCartBtn"></i>
+        </div>
+        <div class="productCard">
+          <img src="../Images/LampShopImg/LampImg6jpg.jpg" alt=""  class="product-img"/>
+          <h2 class="prouctTitle">Lamp 5</h2>
+          <h3 class="price">$20</h3>
+          <i class="fa-solid fa-cart-shopping addToCartBtn"></i>
+        </div>
+    </section>
+    <footer id="footer">
+      <div class="footer-container">
+        <div class="footer-section about">
+          <h2>About Us</h2>
+          <p>
+            We are a leading company in providing the best services and products
+            to our customers. Our mission is to enhance the customer experience
+            through innovation and excellence.
+          </p>
+        </div>
+        <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact">
+          <h2>Contact Us</h2>
+          <p>Email: info@company.com</p>
+          <p>Phone: (123) 456-7890</p>
+          <p>Address: 123 Main Street, Anytown, USA</p>
+        </div>
+        <!-- <div class="footer-section social">
+          <h2>Follow Us</h2>
+          <a href="#"><img src="images/facebook.png" alt="Facebook" /></a>
+          <a href="#"><img src="images/twitter.png" alt="Twitter" /></a>
+          <a href="#"><img src="images/instagram.png" alt="Instagram" /></a>
+          <a href="#"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+        </div> -->
+      </div>
+      <div class="footer-bottom">
+        &copy; 2024 Company Name. All rights reserved.
+      </div>
+    </footer>
+    <script src="../app.js"></script>
+  </body>
+</html>

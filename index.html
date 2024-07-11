@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furniture Strore</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- nav bar -->
+    <header>
+      <nav class="navBar">
+        <div class="logo">
+          <img
+            src="Images/ProjectImage.jpg"
+            alt="Logo"
+            class="logoImage"
+            width="40px"
+            height="40px"
+          />
+        </div>
+        <div class="links-container">
+          <a href="#" class="navLink">Home</a>
+          <a href="ShopPage/shop.html" class="navLink">Shop</a>
+          <a href="#footer" class="navLink">Contact</a>
+          <a href="#blogContainer1" class="navLink">About Us</a>
+        </div>
+        <div class="navLog">
+          <button class="navBtn" id="logIn-Btn">
+            <i class="fa-solid fa-user"></i>
+          </button>
+          <i class="fa-solid fa-cart-shopping shoppingCartDisplay"></i>
+        </div>
+      </nav>
+    </header>
+    <dialog id="modalLogin" class="modal">
+      <div class="topHalfModal">
+        <h1 class="modalTittle">Login</h1>
+        <img src="Images/LopInImg.jpg" alt="Furniture Picture" />
+      </div>
+      <div class="bottomHalfModal">
+        <form method="dialog" class="loginForm">
+          <label
+            >Email:
+            <input
+              id="loginEmail"
+              type="email"
+              name="email"
+              placeholder="Enter You Email"
+              required
+            />
+          </label>
+          <label
+            >Password:
+            <input
+              id="loginPassword"
+              type="password"
+              name="password"
+              placeholder="Enter Your Password"
+              required
+            />
+          </label>
+        </form>
+      </div>
+      <button id="sign-upBtn">
+        Sign-up
+        <i class="fa-solid fa-user"></i>
+      </button>
+      <button class="logInBtnCloseModal" id="logInBtnModal">
+        Login
+        <i class="fa-solid fa-user"></i>
+      </button>
+      <button class="closeModal" id="closeLoginModal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </dialog>
+    <dialog id="signUpModal" class="modal">
+      <div class="topHalfModal">
+        <h1 class="modalTittle">Sign Up</h1>
+        <img src="Images/LopInImg.jpg" alt="Furniture Picture" />
+      </div>
+      <div class="bottomHalfModal">
+        <form method="dialog" class="loginForm signUpForm">
+          <label
+            >Name
+            <input
+              id="inputName"
+              type="email"
+              name="email"
+              placeholder="Enter You Name"
+              required
+            />
+          </label>
+          <label
+            >Surnaname:
+            <input
+              id="inputSurname"
+              type="email"
+              name="email"
+              placeholder="Enter You Surname"
+              required
+            />
+          </label>
+          <label
+            >Username:
+            <input
+              id="inputUsername"
+              type="email"
+              name="email"
+              placeholder="Enter You Username"
+              required
+            />
+          </label>
+          <label
+            >Email:
+            <input
+              id="inputEmail"
+              type="email"
+              name="email"
+              placeholder="Enter You Email"
+              required
+            />
+          </label>
+          <label
+            >Password:
+            <input
+              id="inputPassword"
+              type="password"
+              name="password"
+              placeholder="Enter Your Password"
+              required
+            />
+          </label>
+        </form>
+      </div>
+      <button
+        class="logInBtnCloseModal"
+        id="closemodalSignUpByLogin"
+        style="margin-top: 0"
+      >
+        Login
+        <i class="fa-solid fa-user"></i>
+      </button>
+      <button id="closeSignUpModal" class="closeModal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </dialog>
+    <section class="cartSection">
+      <div class="cart">
+        <h2 class="cartTittle">Your Cart</h2>
+        <div class="cartContent">
+        <div class="total">
+          <div class="total-tittle">Total</div>
+          <div class="total-price">$0</div>
+        </div>
+      </div>
+        <i class="fa-solid fa-x" id="closeCart"></i>
+      </div>
+    </section>
+    <section class="homePage">
+      <div class="bckImage">
+        <img
+          src="Images/BckImgHomePage3.jpg"
+          alt="Living Room Image"
+          class="src"
+          width="100%"
+          height="900px"
+        />
+      </div>
+      <div class="txt-Hp-content">
+        <h1 class="homePageTxt h1CardText">
+          The Art Of Modern
+          <br />Interior Living
+        </h1>
+        <p class="homePageTxt pCardText">Explore the most comfortable sofas</p>
+        <div class="exploreMoreLinkContainer">
+          <a href="ShopPage/shop.html" class="exploreMoreLink">Explore more</a>
+        </div>
+      </div>
+    </section>
+    <!-- dalivery banner -->
+    <section class="deliveryInfo">
+      <div class="information">
+        <h2 class="deliveryTxt text1">
+          <i class="fa-solid fa-truck-fast"></i>
+          Free Shipping Over 50$
+        </h2>
+        <h2 class="deliveryTxt">
+          <i class="fa-solid fa-check"></i>
+          Quality Assurance
+        </h2>
+        <h2 class="deliveryTxt">
+          <i class="fa-solid fa-box"></i>
+          Return within 14 days
+        </h2>
+        <h2 class="deliveryTxt">
+          <i class="fa-solid fa-phone"></i>
+          Support 24/7
+        </h2>
+      </div>
+    </section>
+
+    <!-- shop links cards -->
+    <section class="secondSection">
+      <div class="secondPageTtile">
+        <h1>Check Our Store</h1>
+      </div>
+      <div class="secondPgImg img2">
+        <h1>Sofa</h1>
+        <a href="SofaShopPage/sofaShop.html">
+          <img
+            src="Images/SecondSectionImage2.jpg"
+            alt="LampImage"
+            style="border-radius: 20px"
+            width="470px"
+          />
+        </a>
+      </div>
+      <div class="secondPgImg img1">
+        <h1>Furniture</h1>
+        <a href="LampShopPage/lampShop.html">
+          <img
+            src="Images/SecondPageImage1.jpg"
+            alt="LampImage"
+            class="img1"
+            style="border-radius: 20px"
+            width="900px"
+          />
+        </a>
+      </div>
+      <div class="secondPgImg img3">
+        <h1>Decor</h1>
+        <a href="ShopPage/shop.html">
+          <img
+            src="Images/SecondSectionImage3.jpg"
+            alt="LampImage"
+            class="img3"
+            style="border-radius: 20px"
+          />
+        </a>
+      </div>
+      <div class="secondPgImg img4">
+        <h1>Lamp</h1>
+        <a href="LampShopPage/lampShop.html">
+          <img
+            src="Images/SecondSectionImage4.jpg"
+            alt="LampImage"
+            class="img4"
+            style="border-radius: 20px"
+          />
+        </a>
+      </div>
+    </section>
+
+    <!--Best sellers-->
+    <section class="BestSeller">
+      <div class="BsTitle">
+        <h1>Best Sellers</h1>
+        <p>Explore More Products</p>
+      </div>
+      <div class="allCardsContainer">
+        <div class="shopCard">
+          <div class="cardImg">
+            <img src="Images/BestSellerImgChar.jpg" alt="ChairImage" />
+            <h1 class="hotBS">Hot</h1>
+            <button class="seeMoreBtn">
+              <a href="ShopPage/shop.html">
+                See More <i class="fa-solid fa-shop"></i>
+              </a>
+            </button>
+          </div>
+          <div class="ShopCardDescription">
+            <h3 class="cardTitle">Black chair</h3>
+            <h2 class="price">250$</h2>
+          </div>
+        </div>
+        <div class="shopCard">
+          <div class="cardImg">
+            <img src="Images/BestSellerImage2.jpg" alt="ChairImage" />
+            <h1 class="hotBS">Hot</h1>
+            <button class="seeMoreBtn">
+              <a href="ShopPage/shop.html">
+                See More <i class="fa-solid fa-shop"></i>
+              </a>
+            </button>
+          </div>
+          <div class="ShopCardDescription">
+            <h3 class="cardTitle">Gray chair</h3>
+            <h2 class="price">300$</h2>
+          </div>
+        </div>
+        <div class="shopCard">
+          <div class="cardImg">
+            <img src="Images/BestSellerImage3.jpg" alt="ChairImage" />
+            <h1 class="hotBS">Hot</h1>
+            <button class="seeMoreBtn">
+              <a href="ShopPage/shop.html">
+                See More <i class="fa-solid fa-shop"></i>
+              </a>
+            </button>
+          </div>
+          <div class="ShopCardDescription">
+            <h3 class="cardTitle">Black Wooden chair</h3>
+            <h2 class="price">250$</h2>
+          </div>
+        </div>
+        <div class="shopCard">
+          <div class="cardImg">
+            <img src="Images/BestSellerImage4.jpg" alt="ChairImage" />
+            <h1 class="hotBS">Hot</h1>
+            <button class="seeMoreBtn">
+              <a href="LampShopPage/lampShop.html">
+                See More <i class="fa-solid fa-shop"></i>
+              </a>
+            </button>
+          </div>
+          <div class="ShopCardDescription">
+            <h3 class="cardTitle">Black chair</h3>
+            <h2 class="price">250$</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="BlogPage" id="blogContainer1">
+      <div class="blogContainer">
+        <div class="leftSide">
+          <div class="blogImg">
+            <img src="Images/blogPageImg/blogPageImg.jpg" alt="" />
+          </div>
+        </div>
+          <div class="midSide">
+            <div class="top">
+              <h1>Exclusive design</h1>
+              <p>Mixture of imagination, experience and professionalism is the secret of our design!</p>
+            </div>
+            <div class="mid">
+              <h1>Professional Team</h1>
+              <p>We are proud of our amicable, professional and always developing team!</p>
+            </div>
+            <div class="bottom">
+              <h1>Reasonable Prices</h1>
+              <p>We produce furniture to fulfill needs of all people and offer it at affordable and fair prices</p>
+            </div>
+          </div>
+          <div class="rightSide">
+            <hi class="aboutUs">About us</hi>
+            <div class="pBlogPage">
+              <p>
+                Furnicom is a furniture-producing company which items can be
+                characterized as unique, non-conformist and authentic – never
+                boring and always full of imagination and inspiration.
+              </p>
+              <p>
+                Furnicom succeeds for years in tracking down style icons,
+                developing trends and innovations in furniture design, and using
+                them to fulfil the dreams of furnishing enthusiasts.
+              </p>
+              <p>
+                With the courage to innovate, Furnicom creates trends and unique
+                furnishing collections being affordable and desirable for all
+                people. As an international supplier and generator of change
+                Furnicom continues creating new furnishing designs and art
+                objects.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Fotter-->
+    <footer id="footer">
+      <div class="footer-container">
+        <div class="footer-section about">
+          <h2>About Us</h2>
+          <p>
+            We are a leading company in providing the best services and products
+            to our customers. Our mission is to enhance the customer experience
+            through innovation and excellence.
+          </p>
+        </div>
+        <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#footer">About</a></li>
+            <li><a href="#footer">Services</a></li>
+            <li><a href="#footer">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact">
+          <h2>Contact Us</h2>
+          <p>Email: info@company.com</p>
+          <p>Phone: (123) 456-7890</p>
+          <p>Address: 123 Main Street, Anytown, USA</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2024 Company Name. All rights reserved.
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
